@@ -2,9 +2,9 @@
 <html lang="zh-CN" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <base href='http://blog.yioio.com/'>
+    <base href='<?php echo URL_BLOG; ?>'>
     <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
-    <title></title>
+    <title><?php // echo $title; ?></title>
     <style>
       body{
         margin:0;
@@ -102,8 +102,8 @@
     <!--START OF 头部-->
     <div class="header">
       <div class="inner globalWidth">
-        <div class="title"><a href="http://blog.yioio.com/">Tree.php</a></div>
-        <small><a href="http://blog.yioio.com/">The purpose is to help PHP developers</a></small>
+        <div class="title"><?php echo \lib\HtmlHelper::href(BLOG_TITLE, URL_BLOG) ?></div>
+        <small><?php echo \lib\HtmlHelper::href(BLOG_SUB_TITLE, URL_BLOG) ?></small>
       </div>
     </div>
     <!--END OF 头部-->
@@ -111,19 +111,23 @@
     <div class="article">
       <div class="globalWidth">
         <div class="leftPart">
-                    <div class="format_left">
-            <div class="iTitle"><a href="article/1.html">example2世界你好世界，您好！</a></div>
+          <?php foreach($articles as $article): ?>
+          <div class="format_left">
+            <div class="iTitle"><?php echo \lib\HtmlHelper::hrefBlog($article['post_title'], $article['id']); ?></div>
             <div class="iInfoMore">
                 <b>日期</b>
-                <span class="iDate">2016-04-26</span>
+                <span class="iDate"><?php echo substr($article['post_date'], 0, 10); ?></span>
                 <b>分类</b>
-                <span class="iTag">未分类</span>
+                <span class="iTag"><?php echo $article['category']; ?></span>
                 <b>标签</b>
-                                <span class="iTag">#未分类#</span>
-                            </div>
-            <div class="iContent">欢迎使用WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！</div>
+                <?php foreach($article['post_tag'] as $tag): ?>
+                <span class="iTag">#<?php echo $tag; ?>#</span>
+                <?php endforeach; ?>
+            </div>
+            <div class="iContent"><?php echo $article['post_content']; ?></div>
           </div>
-                  </div>
+          <?php endforeach; ?>
+        </div>
         <div class="rightPart">
           <div class="format_right">
           </div>
