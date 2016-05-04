@@ -6,7 +6,7 @@ define('BLOG_SUB_TITLE', 'Make PHP programmer world happier');
 define('URL_BLOG', 'http://blog.yioio.com/');
 
 /**
- * 数据库相关信息
+ * 数据库相关信息，敏感信息，切记莫上传
  */
 define('DB_HOST', 'localhost');
 define('DB_DATABASE', 'wordpress');

@@ -5,10 +5,12 @@
  * @version 2016-05-04
  */
 
+ini_set("error_reporting",E_ALL ^ E_NOTICE);
+
 define('BASE_PATH', __DIR__.'/');
 
 function auto_load_function($className){
-    include_once BASE_PATH. $className.'.php';
+    include_once BASE_PATH. str_replace('\\', '/', $className).'.php';
 }
 
 spl_autoload_register("auto_load_function");
