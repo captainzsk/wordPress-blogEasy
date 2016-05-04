@@ -22,6 +22,9 @@ class CacheHelper{
         $htmlFilePath = BASE_PATH."blogHtml/{$articleId}.html";
         
         //保存为*.html缓存文件
+        if(!is_dir(dirname($htmlFilePath))){
+            mkdir(dirname($htmlFilePath), 0755, true);
+        }
         $result = file_put_contents($htmlFilePath, $articleHtml);
         
         if(!$result){
