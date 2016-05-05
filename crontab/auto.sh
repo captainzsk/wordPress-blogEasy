@@ -1,4 +1,4 @@
-if [! -d newlubin.github.io];then
+if [ ! -d newlubin.github.io ];then
     git clone git@newlubin.github.io:newlubin/newlubin.github.io.git;
 fi;
 
