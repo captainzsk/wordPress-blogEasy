@@ -22,6 +22,7 @@ class MySQLModel{
             $article['category'] = isset($tagCategory[$article_id]['category']) ? $tagCategory[$article_id]['category'] : '';
             $article['post_tag'] = isset($tagCategory[$article_id]['post_tag']) ? $tagCategory[$article_id]['post_tag'] : [];
         }
+        ksort($articles);
         
         return $articles;
     }
@@ -37,7 +38,7 @@ class MySQLModel{
         foreach ($articles as $ret){
             $formatArticles[$ret['id']] = $ret;
         }
-        krsort($formatArticles);
+        
         return $formatArticles;
     }
     
