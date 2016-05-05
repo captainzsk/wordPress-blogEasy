@@ -37,7 +37,7 @@ class MySQLModel{
         foreach ($articles as $ret){
             $formatArticles[$ret['id']] = $ret;
         }
-        
+        krsort($formatArticles);
         return $formatArticles;
     }
     
