@@ -22,7 +22,8 @@ class MySQLModel{
             $article['category'] = isset($tagCategory[$article_id]['category']) ? $tagCategory[$article_id]['category'] : '';
             $article['post_tag'] = isset($tagCategory[$article_id]['post_tag']) ? $tagCategory[$article_id]['post_tag'] : [];
         }
-        ksort($articles);
+        
+        krsort($articles);  //按时间倒序
         
         return $articles;
     }
