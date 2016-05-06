@@ -32,7 +32,7 @@ class Process{
      */
     private function _getRenderOutputOfIndex($articles){
         
-        foreach($articles as &$article){
+        foreach($articles as $article){
 //            var_dump($article);exit;
             $text = strip_tags($article['post_content']);
             $text = str_replace(["\n", '  '], ['', ' '], $text);
@@ -60,6 +60,7 @@ class Process{
             $articleHtml = ob_get_contents();
             ob_end_clean();
             //输出到blogHtml
+            $articleHtml = "<p>".  str_replace("\n", '</p><p>', $articleHtml)."</p>";
             (new \lib\CacheHelper())->output($articleHtml, $articleId);
         }
     }
