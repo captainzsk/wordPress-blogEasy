@@ -55,6 +55,7 @@ class Process{
         
         //一个一个地渲染出博客内容，保存到blogHtml
         foreach($articles as $articleId=>$article){
+            $article['post_content'] = "<p>".  str_replace("\n", '</p><p>', $article['post_content'])."</p>";
             ob_start();
             (new \lib\TemplateHelper())->render([$article]);
             $articleHtml = ob_get_contents();
@@ -63,6 +64,4 @@ class Process{
             (new \lib\CacheHelper())->output($articleHtml, $articleId);
         }
     }
-    
 }
-

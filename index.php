@@ -15,6 +15,9 @@ function auto_load_function($className){
 
 spl_autoload_register("auto_load_function");
 
-include_once BASE_PATH.'config.php';
+$load = @require BASE_PATH.'config.php';
+if(!$load){
+    die("File : config.php was not found.\nPlease run command : cp config_example.php config.php;\nThen correcty data of config.");
+}
 
 (new \lib\Process())->run();

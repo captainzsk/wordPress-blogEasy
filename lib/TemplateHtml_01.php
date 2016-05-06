@@ -97,6 +97,9 @@
       }
       
     </style>
+    <script>
+        <?php echo STATISTICS_SCRIPT_CODE; ?>
+    </script>
   </head>
   <body>
     <!--START OF 头部-->
@@ -124,7 +127,7 @@
                 <span class="iTag">#<?php echo $tag; ?>#</span>
                 <?php endforeach; ?>
             </div>
-            <div class="iContent"><?php echo "<p>".  str_replace("\n", '</p><p>', $article['post_content'])."</p>"; ?></div>
+            <div class="iContent"><?php echo $article['post_content']; ?></div>
           </div>
           <?php endforeach; ?>
         </div>
@@ -140,15 +143,5 @@
     <!--END OF 脚部-->
 
   </body>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?5b39f453b0d1722a6fb378b0047b76b9";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-})();
-</script>
   
 </html>
