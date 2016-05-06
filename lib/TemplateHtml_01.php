@@ -124,7 +124,7 @@
                 <span class="iTag">#<?php echo $tag; ?>#</span>
                 <?php endforeach; ?>
             </div>
-            <div class="iContent"><pre><?php echo $article['post_content']; ?></pre></div>
+            <div class="iContent"><?php echo "<p>".  str_replace("\n", '</p><p>', $article['post_content'])."</p>"; ?></div>
           </div>
           <?php endforeach; ?>
         </div>
