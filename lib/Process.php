@@ -60,7 +60,6 @@ class Process{
             $articleHtml = ob_get_contents();
             ob_end_clean();
             //输出到blogHtml
-            $articleHtml = "<p>".  str_replace("\n", '</p><p>', $articleHtml)."</p>";
             (new \lib\CacheHelper())->output($articleHtml, $articleId);
         }
     }
