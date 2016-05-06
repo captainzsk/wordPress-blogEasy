@@ -25,8 +25,8 @@ class Process{
         $this->_getRenderOutput($articles);
         
         //复制图片
+        mkdir(STATISTICS_FILE_PATH_DEST, 0755, true);
         system("cp -rf ".STATISTICS_FILE_PATH." ".STATISTICS_FILE_PATH_DEST);
-        
     }
     
     /**
