@@ -3,13 +3,15 @@
 define('BLOG_TITLE', 'Tree.php');
 define('BLOG_SUB_TITLE', 'Make PHP programmer world happier');
 
-//博客的网址
+//博客的网址 
 define('URL_BLOG', 'http://blog.yioio.com/');
-//原来的域名
+//原来的域名 
 define('DOMAIN_REAL_OLD', 'treephp.yioio.com');
-//要被替换的域名
+//要被替换的域名 
 define('DOMAIN_REAL_NEW', 'blog.yioio.com');
-
+//图客图片的路径 
+define('STATISTICS_PATH', '/yioio/code/treephp/wp-content');
+ 
 /**
  * 数据库相关信息，敏感信息，切记莫上传
  */

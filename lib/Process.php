@@ -24,6 +24,9 @@ class Process{
         //渲染结果并生成所有的index.html
         $this->_getRenderOutput($articles);
         
+        //复制图片
+        copy(STATISTICS_PATH, __DIR__.'/blogHtml/');
+        
     }
     
     /**
