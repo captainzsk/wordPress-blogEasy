@@ -15,6 +15,9 @@ class CacheHelper{
      */
     public function output($articleHtml, $articleId = 'index'){
         
+        //替换掉域名
+        $articleHtml = str_replace(DOMAIN_REAL_OLD, DOMAIN_REAL_NEW, $articleHtml);
+        
         //如果不是首页，就放到blogs文件夹
         $articleId != 'index' && $articleId = 'article/'.$articleId;
         

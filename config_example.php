@@ -3,16 +3,21 @@
 define('BLOG_TITLE', 'Tree.php');
 define('BLOG_SUB_TITLE', 'Make PHP programmer world happier');
 
+//博客的网址
 define('URL_BLOG', 'http://blog.yioio.com/');
+//原来的域名
+define('DOMAIN_REAL_OLD', 'treephp.yioio.com');
+//要被替换的域名
+define('DOMAIN_REAL_NEW', 'blog.yioio.com');
 
 /**
  * 数据库相关信息，敏感信息，切记莫上传
  */
 define('DB_HOST', 'localhost');
-define('DB_DATABASE', 'treephp');
-define('DB_USER', 'yioio');
-define('DB_PASSWD', 'yio&*(-');
-define('DB_PREFIX', 'wp_');
+define('DB_DATABASE', 'wordpress');
+define('DB_USER', 'root');
+define('DB_PASSWD', 'root');
+define('DB_PREFIX', 'wp2_');
 
 /**
  * GitHub仓库地址
