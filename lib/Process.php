@@ -25,7 +25,7 @@ class Process{
         $this->_getRenderOutput($articles);
         
         //复制图片
-        copy(STATISTICS_FILE_PATH, __DIR__.'/blogHtml/');
+        system("cp -rf ".STATISTICS_FILE_PATH." ".__DIR__."/blogHtml/");
         
     }
     
