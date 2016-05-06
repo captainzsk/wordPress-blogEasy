@@ -1,3 +1,4 @@
 /nbproject
 config.php
-blogHtml
+blogHtml/*
+crontab/blog/*

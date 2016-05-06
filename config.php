@@ -13,3 +13,9 @@ define('DB_DATABASE', 'wordpress');
 define('DB_USER', 'root');
 define('DB_PASSWD', 'root');
 define('DB_PREFIX', 'wp2_');
+
+/**
+ * GitHub相关信息
+ */
+define('GITHUB', 'git@newlubin.github.io:newlubin/newlubin.github.io.git');
+
