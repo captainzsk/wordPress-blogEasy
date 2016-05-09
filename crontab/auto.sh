@@ -5,11 +5,11 @@ if [ ! -d blog ];then
 fi; 
  
 cd blog; 
- 
+
 git reset --hard HEAD; 
-git pull; 
+git pull;
 cp ../../blogHtml/* ./ -rf;  
- 
+
 git add -A;  
 git commit -m "sync blog";  
 git push origin master;  

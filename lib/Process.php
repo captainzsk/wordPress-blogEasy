@@ -17,11 +17,16 @@ class Process{
         
         //获取数据库内容
         $articles = (new \lib\MySQLModel)->getArticleDetail();
+//        var_dump($articles);
+        echo "Get data success!\n";
+//        exit;
         
         //渲染一个首页
+        echo "start render template of index...\n";
         $this->_getRenderOutputOfIndex($articles);
         
-        //渲染结果并生成所有的index.html
+        //渲染结果并生成所有的html
+        echo "start render template of content html file...\n";
         $this->_getRenderOutput($articles);
         
         //复制图片
@@ -35,7 +40,7 @@ class Process{
      */
     private function _getRenderOutputOfIndex($articles){
         
-        foreach($articles as $article){
+        foreach($articles as &$article){
 //            var_dump($article);exit;
             $text = strip_tags($article['post_content']);
             $text = str_replace(["\n", '  '], ['', ' '], $text);

@@ -7,7 +7,7 @@
 
 namespace lib;
 
-class MySQLDAO{
+class MySQLDAO {
     
     private $_table_prefix = DB_PREFIX;
     
@@ -16,6 +16,7 @@ class MySQLDAO{
      * @param type $article
      */
     public function getArticles(){
+        
         $sql  = " SELECT id, post_title, post_content, post_date FROM {$this->_table_prefix}posts";
         $sql .= " WHERE post_status = 'publish'";
         

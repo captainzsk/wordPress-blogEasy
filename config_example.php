@@ -11,7 +11,7 @@ define('DOMAIN_REAL_OLD', 'treephp.yioio.com');
 define('DOMAIN_REAL_NEW', 'blog.yioio.com');
 //图客图片的路径 
 define('STATISTICS_PATH', '/yioio/code/treephp/wp-content');
- 
+
 /**
  * 数据库相关信息，敏感信息，切记莫上传
  */

@@ -16,6 +16,7 @@ class TemplateHelper{
      * @param string $templateVersion 参数会拼装为TemplateHtml，然后从模板文件找
      */
     public function render($articles, $templateVersion = '01'){
+//        echo __DIR__.'/TemplateHtml_'.$templateVersion.'.php';exit;
         $template = include __DIR__.'/TemplateHtml_'.$templateVersion.'.php';
         
         return $template;

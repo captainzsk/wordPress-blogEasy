@@ -145,3 +145,7 @@
   </body>
   
 </html>
+<script>
+var data = {};
+
+</script>

@@ -32,6 +32,8 @@ class CacheHelper{
         
         if(!$result){
             echo "文章{$articleId}写入失败！";
+        }else{
+            echo "文章写入成功!\n";
         }
     }
 }

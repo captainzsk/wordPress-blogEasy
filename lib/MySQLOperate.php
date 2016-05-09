@@ -23,9 +23,10 @@ class MySQLOperate{
      */
     public function instance(){
         
+        //TODO:可以优化，因为每次都要执行
         $dsn = "mysql:host={$this->_host};dbname={$this->_database};charset=utf8;";
         
-        !self::$m_link && self::$m_link =  new PDO($dsn, $this->_user, $this->_password);
+        !self::$m_link && self::$m_link = new PDO($dsn, $this->_user, $this->_password);
         
         return self::$m_link;
     }
