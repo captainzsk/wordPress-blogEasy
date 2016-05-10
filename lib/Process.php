@@ -51,8 +51,8 @@ class Process{
      * 生成 RSS2  
      */
     private function _makeRss2($articles){
-        foreach($articles as &$article){
-            \lib\ArticleHelper::formateAsRss2($article);
+        foreach($articles as $key=>$article){
+            $articles[$key] = \lib\ArticleHelper::formateAsRss2($article);
         }
         
         ob_start();
@@ -70,8 +70,8 @@ class Process{
      */
     private function _getRenderOutputOfIndex($articles){
         
-        foreach($articles as &$article){
-            \lib\ArticleHelper::formateAsIndex($article);
+        foreach($articles as $key=>$article){
+            $articles[$key] = \lib\ArticleHelper::formateAsIndex($article);
         }
         
         ob_start();
