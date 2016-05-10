@@ -133,6 +133,7 @@
         </div>
         <div class="rightPart">
           <div class="format_right">
+            <?php echo \lib\HtmlHelper::href('RSS', URL_BLOG.'feed.rss2'); ?>
           </div>
         </div>
       </div>
