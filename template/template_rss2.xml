@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>TreePhp</title>
+	<atom:link href="http://treephp.yioio.com/?feed=rss2" rel="self" type="application/rss+xml" />
+	<link>http://treephp.yioio.com</link>
+	<description>又一个WordPress站点</description>
+	<lastBuildDate>Fri, 06 May 2016 01:53:23 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5</generator>
+	<item>
+		<title>BlogEasy_v1 发布</title>
+		<link>http://treephp.yioio.com/?p=34</link>
+		<comments>http://treephp.yioio.com/?p=34#respond</comments>
+		<pubDate>Fri, 06 May 2016 01:53:23 +0000</pubDate>
+		<dc:creator><![CDATA[yioioTree20_6]]></dc:creator>
+				<category><![CDATA[未分类]]></category>
+		<category><![CDATA[blogEasy]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<category><![CDATA[wordpress]]></category>
+
+		<guid isPermaLink="false">http://treephp.yioio.com/?p=34</guid>
+		<description><![CDATA[写这个程序的目的是想把Wordpress的文章，转化成html文件。然后将这些文件上传到GitHub.io，这 &#8230; <a href="http://treephp.yioio.com/?p=34" class="more-link">继续阅读<span class="screen-reader-text">“BlogEasy_v1 发布”</span></a>]]></description>
+				<content:encoded><![CDATA[正文]]></content:encoded>
+			<wfw:commentRss>http://treephp.yioio.com/?feed=rss2&#038;p=34</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		
+		<item>
+		<title>ubuntu下的php7 源码安装</title>
+		<link>http://treephp.yioio.com/?p=24</link>
+		<comments>http://treephp.yioio.com/?p=24#respond</comments>
+		<pubDate>Tue, 03 May 2016 13:34:18 +0000</pubDate>
+		<dc:creator><![CDATA[yioioTree20_6]]></dc:creator>
+				<category><![CDATA[系统]]></category>
+		<category><![CDATA[nginx]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[安装]]></category>
+
+		<guid isPermaLink="false">http://treephp.yioio.com/?p=24</guid>
+		<description><![CDATA[获取 PHP 指定版本，下载地址可以在这个页面找到： sudo wget http://cn2.php.net &#8230; <a href="http://treephp.yioio.com/?p=24" class="more-link">继续阅读<span class="screen-reader-text">“ubuntu下的php7 源码安装”</span></a>]]></description>
+				<content:encoded><![CDATA[<p>获取 PHP 指定版本，下载地址可以在这个页面找到：</p>]]></content:encoded>
+			<wfw:commentRss>http://treephp.yioio.com/?feed=rss2&#038;p=24</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

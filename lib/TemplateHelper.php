@@ -16,8 +16,28 @@ class TemplateHelper{
      * @param string $templateVersion 参数会拼装为TemplateHtml，然后从模板文件找
      */
     public function render($articles, $templateVersion = '01'){
-//        echo __DIR__.'/TemplateHtml_'.$templateVersion.'.php';exit;
+        
         $template = include __DIR__.'/TemplateHtml_'.$templateVersion.'.php';
+        
+        return $template;
+    }
+    
+    /**
+     * 
+     * @param array $articles
+     * @param type $templateVersion
+     * @return type
+     */
+    public function renderRss2($articles){
+        echo '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>';
+        $template = include __DIR__.'/TemplateRss.php';
         
         return $template;
     }

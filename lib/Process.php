@@ -17,9 +17,21 @@ class Process{
         
         //获取数据库内容
         $articles = (new \lib\MySQLModel)->getArticleDetail();
-//        var_dump($articles);
-        echo "Get data success!\n";
-//        exit;
+        if($articles){
+            echo "Get data success!\n";
+        }
+        
+        //生成HTML
+        $this->_makeHtml($articles);
+        
+        //生成Rss
+        $this->_makeRss2($articles);
+    }
+    
+    /**
+     * 生成 HTML 
+     */
+    private function _makeHtml($articles){
         
         //渲染一个首页
         echo "start render template of index...\n";
@@ -30,8 +42,26 @@ class Process{
         $this->_getRenderOutput($articles);
         
         //复制图片
-        mkdir(STATISTICS_FILE_PATH_DEST, 0755, true);
+        echo STATISTICS_FILE_PATH_DEST,"\n";
+        !is_dir(STATISTICS_FILE_PATH_DEST) && mkdir(STATISTICS_FILE_PATH_DEST, 0755, true);
         system("cp -rf ".STATISTICS_FILE_PATH." ".STATISTICS_FILE_PATH_DEST);
+    }
+    
+    /**
+     * 生成 RSS2  
+     */
+    private function _makeRss2($articles){
+        foreach($articles as &$article){
+            \lib\ArticleHelper::formateAsRss2($article);
+        }
+        
+        ob_start();
+        (new \lib\TemplateHelper())->renderRss2($articles);
+        $articleString = ob_get_contents();
+        ob_end_clean();
+        
+        //输出到blogHtml
+        (new \lib\CacheHelper())->output($articleString, 'RSS2');
     }
     
     /**
@@ -41,19 +71,16 @@ class Process{
     private function _getRenderOutputOfIndex($articles){
         
         foreach($articles as &$article){
-//            var_dump($article);exit;
-            $text = strip_tags($article['post_content']);
-            $text = str_replace(["\n", '  '], ['', ' '], $text);
-            $article['post_content'] = mb_substr($text, 0, 200, 'utf-8');
+            \lib\ArticleHelper::formateAsIndex($article);
         }
         
         ob_start();
         (new \lib\TemplateHelper())->render($articles);
-        $articleHtml = ob_get_contents();
+        $articleString = ob_get_contents();
         ob_end_clean();
         
         //输出到blogHtml
-        (new \lib\CacheHelper())->output($articleHtml, 'index');
+        (new \lib\CacheHelper())->output($articleString, 'index');
     }
     
     /**
@@ -63,13 +90,15 @@ class Process{
         
         //一个一个地渲染出博客内容，保存到blogHtml
         foreach($articles as $articleId=>$article){
-            $article['post_content'] = "<p>".  str_replace("\n", '</p><p>', $article['post_content'])."</p>";
+            \lib\ArticleHelper::formateAsDetail($article);
+            
             ob_start();
             (new \lib\TemplateHelper())->render([$article]);
-            $articleHtml = ob_get_contents();
+            $articleString = ob_get_contents();
             ob_end_clean();
+            
             //输出到blogHtml
-            (new \lib\CacheHelper())->output($articleHtml, $articleId);
+            (new \lib\CacheHelper())->output($articleString, $articleId);
         }
     }
 }
