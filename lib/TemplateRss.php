@@ -11,7 +11,7 @@
   
   <?php foreach($articles as $article): ?>
 	<item>
-		<title><?php echo $article['title']; ?></title>
+		<title><?php echo $article['post_title']; ?></title>
 		<link><?php echo URL_BLOG.'blogHtml/'.$article['id'].'.html'; ?></link>
 		<comments></comments>
 		<pubDate><?php echo date(DATE_RFC2822); ?></pubDate>
