@@ -5,6 +5,8 @@ define('BLOG_SUB_TITLE', 'Make PHP programmer world happier');
 
 //博客的网址 
 define('URL_BLOG', 'http://blog.yioio.com/');
+//RSS2地址
+define('URL_RSS', URL_BLOG."rss2.xml");
 //原来的域名 
 define('DOMAIN_REAL_OLD', 'treephp.yioio.com');
 //要被替换的域名 

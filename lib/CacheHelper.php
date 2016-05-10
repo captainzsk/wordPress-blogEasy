@@ -42,7 +42,7 @@ class CacheHelper{
     private function _getHtmlPath($articleId){
         
         if($articleId == 'RSS2'){
-            return BASE_PATH."blogHtml/feed.rss2";
+            return BASE_PATH."blogHtml/".RSS_NAME;
         }
         
         //如果不是首页，就放到blogs文件夹
