@@ -28,7 +28,7 @@ class ArticleHelper{
     public static function formateAsDetail($article){
         
         $article['post_content'] = "<p>".  str_replace("\n", '</p><p>', $article['post_content'])."</p>";
-
+        
         return $article;
         
     }
