@@ -12,7 +12,7 @@
   <?php foreach($articles as $article): ?>
 	<item>
 		<title><?php echo $article['post_title']; ?></title>
-		<link><?php echo URL_BLOG.'blogHtml/'.$article['id'].'.html'; ?></link>
+		<link><?php echo URL_BLOG.'article/'.$article['id'].'.html'; ?></link>
 		<comments></comments>
 		<pubDate><?php echo date(DATE_RFC2822); ?></pubDate>
 		<dc:creator><![CDATA[<?php echo BLOG_TITLE; ?>]]></dc:creator>
@@ -22,7 +22,7 @@
 		<category><![CDATA[<?php echo $tag; ?>]]></category>
     <?php endforeach; ?>
     
-		<guid isPermaLink="false"><?php echo URL_BLOG.$article['id'].'.html'; ?></guid>
+		<guid isPermaLink="false"><?php echo URL_BLOG.'article/'.$article['id'].'.html'; ?></guid>
 		<description><![CDATA[<?php echo $article['post_content']; ?>]]></description>
     <content:encoded><![CDATA[<?php echo $article['post_content']; ?>]]></content:encoded>
 		<wfw:commentRss></wfw:commentRss>
