@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <base href='<?php echo URL_BLOG; ?>'>
+    <meta name="baidu-site-verification" content="73P8XwbEjJ" />
     <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
     <title><?php // echo $title; ?></title>
     <style>
