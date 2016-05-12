@@ -1,6 +1,6 @@
 <channel>
 	<title><?php echo BLOG_TITLE; ?></title>
-	<atom:link href="<?php echo URL_BLOG; ?>feed.rss2" rel="self" type="application/rss+xml" />
+	<atom:link href="<?php echo URL_BLOG.RSS_NAME; ?>" rel="self" type="application/rss+xml" />
 	<link><?php echo URL_BLOG; ?></link>
 	<description><?php echo BLOG_SUB_TITLE; ?></description>
 	<lastBuildDate><?php echo date(DATE_RFC2822); ?></lastBuildDate>

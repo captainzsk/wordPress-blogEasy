@@ -84,14 +84,14 @@ class Process{
     }
     
     /**
-     * 渲染结果并生成所有的 *.html 
+     * 渲染结果并生成所有的 *.html
      */
-    private function _getRenderOutput($articles){
+    private function _getRenderOutput($articles){ 
         
-        //一个一个地渲染出博客内容，保存到blogHtml
-        foreach($articles as $articleId=>$article){
-            $article = \lib\ArticleHelper::formateAsDetail($article);
-            
+        //一个一个地渲染出博客内容，保存到blogHtml 
+        foreach($articles as $articleId=>$article){ 
+            $article = \lib\ArticleHelper::formateAsDetail($article); 
+            var_dump($article);exit;
             ob_start();
             (new \lib\TemplateHelper())->render([$article]);
             $articleString = ob_get_contents();
