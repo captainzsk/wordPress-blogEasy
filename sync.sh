@@ -1,4 +1,5 @@
 # 目的：自动执行脚本
+git checkout master
 git pull
  
 # 先执行脚本，生成html文件
