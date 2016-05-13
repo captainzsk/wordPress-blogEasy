@@ -91,7 +91,6 @@ class Process{
         //一个一个地渲染出博客内容，保存到blogHtml 
         foreach($articles as $articleId=>$article){ 
             $article = \lib\ArticleHelper::formateAsDetail($article); 
-            var_dump($article);exit;
             ob_start();
             (new \lib\TemplateHelper())->render([$article]);
             $articleString = ob_get_contents();
