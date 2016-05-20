@@ -12,7 +12,7 @@
 
 **写这个程序的目的是想把Wordpress的文章，转化成html文件。然后将这些文件上传到GitHub.io，这样可以为服务减负，也可以好好地借用 GitHub 的便利进行传播。**
 
-> Git仓库地址：https://github.com/newlubin/blogEasy.git
+> Git仓库地址：https://github.com/newlubin/wordPress-blogEasy.git
 > 
 > 相关介绍：
 > 
